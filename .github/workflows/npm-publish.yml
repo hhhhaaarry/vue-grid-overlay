@@ -12,8 +12,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Puedes especificar la versión de Node.js que necesites
+          node-version: '14'
           registry-url: 'https://registry.npmjs.org/'
+          # Asegúrate de incluir esta línea para configurar correctamente el token de npm
+          node-auth-token: ${{ secrets.NPM_AUTOMATION }}
       - run: npm ci
       - run: npm publish
         env:
