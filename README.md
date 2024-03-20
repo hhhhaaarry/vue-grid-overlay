@@ -17,7 +17,7 @@ npm install your-package-name-grid-overlay
 ## Usage
 
 First, import the `Grid Overlay` component into your view/page or app.vue file.
-Add `GridOverlay` to your `App.vue` to make it available throughout your application.
+Add `Grid Overlay` to your `App.vue` to make it available throughout your application.
 ```vue
 <template>
 <div id="app">
@@ -26,7 +26,7 @@ Add `GridOverlay` to your `App.vue` to make it available throughout your applica
 </div>
 </template>
 <script>
-import GridOverlay from 'your-package-name-grid-overlay';
+import GridOverlay from 'vue-grid-overlay';
 export default {
 name: 'App',
 components: {
