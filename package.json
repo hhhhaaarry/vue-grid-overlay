@@ -1,10 +1,11 @@
 {
   "name": "vue-grid-overlay",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "type": "module",
   "files": [
-    "src"
+    "src/",
+    "index.js"
   ],
   "peerDependencies": {
     "vue": "^3.0.0"
