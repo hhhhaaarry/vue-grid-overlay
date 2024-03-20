@@ -165,6 +165,10 @@
 <script setup>
 import { computed, ref, watch, onMounted, onUnmounted } from 'vue';
 
+// Verifica si está en el cliente de manera segura para ambos, Nuxt y Vue puro
+const isClient = typeof window !== 'undefined';
+
+
 const columnCount = ref(10);
 const rowCount = ref(0);
 const columnColor = ref('#FF0000');
@@ -420,95 +424,95 @@ watch(() => columnType.value, (newValue) => {
 
 // local storage watchers
 watch(columnCount, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('columnCount', newValue);
     }
 });
 
 watch(rowCount, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('rowCount', newValue);
     }
 });
 
 watch(columnColor, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('columnColor', newValue.toString());
     }
 });
 
 watch(rowColor, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('rowColor', newValue.toString());
     }
 });
 
 watch(columnOpacity, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('columnOpacity', newValue);
     }
 });
 
 watch(rowOpacity, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('rowOpacity', newValue);
     }
 });
 
 watch(columnWidth, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('columnWidth', newValue.toString());
     }
 });
 
 watch(rowHeight, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('rowHeight', newValue.toString());
     }
 });
 
 watch(columnMargin, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('columnMargin', newValue);
     }
 });
 
 watch(rowGutter, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('rowGutter', newValue);
     }
 });
 
 watch(columnGutter, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('columnGutter', newValue);
     }
 });
 
 watch(columnType, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('columnType', newValue.toString());
     }
 });
 watch(rowType, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('rowType', newValue.toString());
     }
 });
 watch(baselineColor, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('baselineColor', newValue.toString());
     }
 });
 
 watch(baselineOpacity, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('baselineOpacity', newValue);
     }
 });
 
 watch(baseline, (newValue) => {
-    if (process.client) {
+    if (isClient) {
         localStorage.setItem('baseline', newValue);
     }
 });
@@ -517,7 +521,7 @@ watch(baseline, (newValue) => {
 
 
 onMounted(() => {
-    if (process.client) {
+    if (isClient) {
         columnCount.value = parseInt(localStorage.getItem('columnCount'), 10) || 0;
         rowCount.value = parseInt(localStorage.getItem('rowCount'), 10) || 10;
         columnColor.value = localStorage.getItem('columnColor') || '#FF0000';
