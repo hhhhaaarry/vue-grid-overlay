@@ -1,2 +1,2 @@
-import GridOverlay from './src/components/GridOverlay.vue';
+import GridOverlay from './src/components/GridOverlay';
 export { GridOverlay };
