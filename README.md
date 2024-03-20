@@ -1,7 +1,5 @@
 # Grid Overlay for Vue 3 and Nuxt 3
 
-
-
 `Grid Overlay` is a Vue component designed to facilitate the development and design of interfaces, allowing developers and designers to visualize a grid over their content, similar to the grids available in Figma.
 
 ## Features
@@ -20,23 +18,26 @@ npm install vue-grid-overlay
 
 First, import the `Grid Overlay` component into your view/page or app.vue file.
 Add `Grid Overlay` to your `App.vue` to make it available throughout your application.
+
 ```vue
 <template>
-<div id="app">
-<GridOverlay />
-<!-- The rest of your application here -->
-</div>
+  <div id="app">
+    <GridOverlay />
+    <!-- The rest of your application here -->
+  </div>
 </template>
 <script>
-import GridOverlay from 'vue-grid-overlay';
+import { GridOverlay } from "vue-grid-overlay";
 export default {
-name: 'App',
-components: {
-GridOverlay
-}
-}
+  name: "App",
+  components: {
+    GridOverlay,
+  },
+};
 </script>
 ```
+
+Then you can press `Shift + G` to toggle the grid overlay on and off, it has 3 states: `off`, `on`, and `on with 50% opacity`.
 
 ## Contributions
 

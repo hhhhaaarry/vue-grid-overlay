@@ -163,7 +163,7 @@
 </template>
 
 <script setup>
-import { computed, defineProps } from 'vue';
+import { computed, ref, watch, onMounted, onUnmounted } from 'vue';
 
 const columnCount = ref(10);
 const rowCount = ref(0);
