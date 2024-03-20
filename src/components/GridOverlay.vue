@@ -213,7 +213,7 @@ function toggleGridVisibility(event) {
     if (event.shiftKey && event.key === 'G') {
         gridState.value = (gridState.value + 1) % 3;
         isGridVisible.value = gridState.value !== 0;
-          isControlsVisible.value = gridState.value !== 0;
+        isControlsVisible.value = gridState.value !== 0;
     }
 }
 
@@ -557,6 +557,8 @@ onUnmounted(() => {
     right: 0;
     z-index: 999;
     pointer-events: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
 }
 
 .grid-rows {
@@ -579,12 +581,12 @@ onUnmounted(() => {
 .grid-controls {
     pointer-events: auto;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 2em;
+    right: 2em;
     z-index: 999;
     background-color: #161616;
     min-width: 200px;
-    padding: 0.5rem;
+    padding: 0.5em;
     color-scheme: light dark;
 
 }
@@ -592,7 +594,7 @@ onUnmounted(() => {
 .grid-controls__header {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.5em;
     border-bottom: 1px solid #333;
 }
 
@@ -629,7 +631,7 @@ onUnmounted(() => {
 .grid-controls .row {
     display: flex;
     width: 100%;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 1em;
+    padding: 1em;
 }
 </style>
