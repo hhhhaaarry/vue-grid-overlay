@@ -1,5 +1,7 @@
 # Grid Overlay for Vue 3 and Nuxt 3
 
+Probando Github Actions
+
 `Grid Overlay` is a Vue component designed to facilitate the development and design of interfaces, allowing developers and designers to visualize a grid over their content, similar to the grids available in Figma.
 
 ## Features
