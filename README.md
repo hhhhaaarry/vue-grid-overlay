@@ -11,7 +11,7 @@
 ## Installation
 
 ```bash
-npm install your-package-name-grid-overlay
+npm install vue-grid-overlay
 ```
 
 ## Usage
