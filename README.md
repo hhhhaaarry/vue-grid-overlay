@@ -14,28 +14,60 @@
 npm install vue-grid-overlay
 ```
 
-## Usage
+## Usage in Vue 3
 
-First, import the `Grid Overlay` component into your view/page or app.vue file.
-Add `Grid Overlay` to your `App.vue` to make it available throughout your application.
+First, import the `Grid Overlay` component into your view/page or `App.vue` file.
+
 
 ```vue
 <template>
-  <div id="app">
-    <GridOverlay />
-    <!-- The rest of your application here -->
-  </div>
+<div id="app">
+<GridOverlay />
+<!-- The rest of your application here -->
+</div>
 </template>
 <script>
 import { GridOverlay } from "vue-grid-overlay";
 export default {
-  name: "App",
-  components: {
-    GridOverlay,
-  },
+name: "App",
+components: {
+GridOverlay,
+},
 };
 </script>
 ```
+
+
+## Usage in Nuxt 3
+
+
+First Create a plugin to register the `GridOverlay` component globally:
+
+Create a file `plugins/grid-overlay.js` with the following content:
+
+```js
+import { GridOverlay } from "vue-grid-overlay";
+
+export default defineNuxtPlugin((nuxtApp) => {
+nuxtApp.vueApp.component("GridOverlay", GridOverlay);
+});
+```
+
+Then Register this plugin in your `nuxt.config.js`:
+
+```js
+export default {
+build: {
+transpile: ['vue-grid-overlay'], // Ensure the package is transpiled
+},
+plugins: [
+'~/plugins/grid-overlay.js'
+]
+}
+```
+
+
+## Keyboard Shortcuts
 
 Then you can press `Shift + G` to toggle the grid overlay on and off, it has 3 states: `off`, `on`, and `on with 50% opacity`.
 
