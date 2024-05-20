@@ -421,7 +421,6 @@ watch(() => columnType.value, (newValue) => {
     }
 });
 
-
 // local storage watchers
 watch(columnCount, (newValue) => {
     if (isClient) {
@@ -433,7 +432,6 @@ watch(rowCount, (newValue) => {
     if (isClient) {
         localStorage.setItem('rowCount', newValue);
     }
-});
 
 watch(columnColor, (newValue) => {
     if (isClient) {
@@ -520,6 +518,8 @@ watch(baseline, (newValue) => {
 
 
 
+
+
 onMounted(() => {
     if (isClient) {
         columnCount.value = parseInt(localStorage.getItem('columnCount'), 10) || 0;
@@ -542,7 +542,6 @@ onMounted(() => {
         window.addEventListener('keydown', toggleGridVisibility);
     }
 });
-
 onUnmounted(() => {
     window.removeEventListener('keydown', toggleGridVisibility);
 });
